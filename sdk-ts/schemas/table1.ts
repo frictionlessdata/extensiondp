@@ -5,7 +5,7 @@
  */
 export interface Table1 {
   /**
-   * Unique identifier of the record
+   * Unique identifier for the record
    */
   id: string
   /**

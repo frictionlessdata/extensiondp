@@ -10,7 +10,7 @@ from typing_extensions import NotRequired
 class Table1(TypedDict):
     id: str
     """
-    Unique identifier of the record
+    Unique identifier for the record
     """
     name: str
     """
