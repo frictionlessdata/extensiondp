@@ -1,1 +1,1 @@
-# datapackage-extension
+# Extension DP
