@@ -1,3 +1,3 @@
 # Extension DP
 
-Cardealer DP (Car Dealer Data Package) is a data exchange format for car dealerships. It is developed on top of the Data Package standard.
+Extension DP (Data Package Extension Template) is a GitHub repository template for rapid Data Package extension development
