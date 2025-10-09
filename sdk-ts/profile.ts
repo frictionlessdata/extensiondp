@@ -4,7 +4,7 @@ export type ExtensionDataPackageProfile = Package
 export type Resource = Table1Resource | Table2Resource
 
 export interface Package {
-  $schema: "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/profile.json"
+  $schema: "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.1/extension/profile.json"
   /**
    * @minItems 1
    */
@@ -18,7 +18,7 @@ export interface Table1Resource {
    * @minItems 1
    */
   data?: [{}, ...{}[]]
-  schema: "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table1.json"
+  schema: "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.1/extension/schemas/table1.json"
 }
 export interface Table2Resource {
   name: "table2"
@@ -28,5 +28,5 @@ export interface Table2Resource {
    * @minItems 1
    */
   data?: [{}, ...{}[]]
-  schema: "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table2.json"
+  schema: "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.1/extension/schemas/table2.json"
 }

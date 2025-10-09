@@ -14,7 +14,7 @@ class Table1Resource(TypedDict):
     Data items have to conform to the Table1 schema
     """
     schema: Literal[
-        'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table1.json'
+        'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.1/extension/schemas/table1.json'
     ]
 
 
@@ -25,7 +25,7 @@ class Table2Resource(TypedDict):
     Data items have to conform to the Table2 schema
     """
     schema: Literal[
-        'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table2.json'
+        'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.1/extension/schemas/table2.json'
     ]
 
 
@@ -36,7 +36,7 @@ Package = TypedDict(
     'Package',
     {
         '$schema': Literal[
-            'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/profile.json'
+            'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.1/extension/profile.json'
         ],
         'resources': Sequence[Resource],
     },

@@ -5,7 +5,7 @@ title: Metadata
 ## Definitions
 
 - <a id="definitions/Package"></a>**`Package`** *(object)*
-  - <a id="definitions/Package/properties/%24schema"></a>**`$schema`**: Must be: `"https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/profile.json"`.
+  - <a id="definitions/Package/properties/%24schema"></a>**`$schema`**: Must be: `"https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.1/extension/profile.json"`.
   - <a id="definitions/Package/properties/resources"></a>**`resources`** *(array, required)*: Length must be at least 1.
     - <a id="definitions/Package/properties/resources/items"></a>**Items**: Refer to *[#/definitions/Resource](#definitions/Resource)*.
 - <a id="definitions/Resource"></a>**`Resource`**
@@ -16,9 +16,9 @@ title: Metadata
   - <a id="definitions/Table1Resource/properties/name"></a>**`name`**: Must be: `"table1"`.
   - <a id="definitions/Table1Resource/properties/data"></a>**`data`** *(array)*: Data items have to conform to the Table1 schema. Length must be at least 1.
     - <a id="definitions/Table1Resource/properties/data/items"></a>**Items** *(object)*
-  - <a id="definitions/Table1Resource/properties/schema"></a>**`schema`**: Must be: `"https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table1.json"`.
+  - <a id="definitions/Table1Resource/properties/schema"></a>**`schema`**: Must be: `"https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.1/extension/schemas/table1.json"`.
 - <a id="definitions/Table2Resource"></a>**`Table2Resource`** *(object)*
   - <a id="definitions/Table2Resource/properties/name"></a>**`name`**: Must be: `"table2"`.
   - <a id="definitions/Table2Resource/properties/data"></a>**`data`** *(array)*: Data items have to conform to the Table2 schema. Length must be at least 1.
     - <a id="definitions/Table2Resource/properties/data/items"></a>**Items** *(object)*
-  - <a id="definitions/Table2Resource/properties/schema"></a>**`schema`**: Must be: `"https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table2.json"`.
+  - <a id="definitions/Table2Resource/properties/schema"></a>**`schema`**: Must be: `"https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.1/extension/schemas/table2.json"`.
