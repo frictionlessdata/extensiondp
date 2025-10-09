@@ -4,82 +4,69 @@ sidebar:
   order: 2
 ---
 
-Cardealer DP provides SDKs for Python and TypeScript/JavaScript to make it easy to publish and consume Car Dealer Data Packages.
+Extension DP provides SDKs for Python and TypeScript/JavaScript to make it easy to publish and consume Extension Data Packages.
 
 ## Python
 
 :::note
-In addition to the Python SDK, we recommend using [frictionless-py](https://framework.frictionlessdata.io/) to manage your data packages. For example, using it you can publish your data pacakge directory to Zenodo instead of saving it locally, as well, as consume it from a remote server.
+In addition to the Python SDK, we recommend using [frictionless-py](https://framework.frictionlessdata.io/) to manage your data packages. For example, using it you can publish your data package directory to Zenodo instead of saving it locally, as well as consume it from a remote server.
 :::
 
 ### Installation
 
 ```bash
-pip install cardealerdp frictionless
+pip install extensiondp frictionless
 ```
 
 ### Publication
 
 ```python
-from cardealerdp import Package, Car, Dealer
+from extensiondp import Package, Table1, Table2
 import frictionless
 
-# Create dealer information
-dealer = Dealer(
-    title="Premium Auto Sales",
-    country="United States",
-    region="California",
-    city="Los Angeles",
-    address="1234 Sunset Boulevard",
-    postcode="90028",
-    phone="+1-323-555-0100",
-    email="sales@premiumauto.com",
-    url="https://www.premiumauto.com",
-    lat=34.0983,
-    lon=-118.3267,
+# Create Table1 records
+record1 = Table1(
+    id="t1-001",
+    name="First Entity",
+    status="active",
+    value=100.5,
+    itemCount=5,
+    isVerified=True,
+    createdDate="2024-01-15",
+    description="This is the first example entity",
 )
 
-# Create car listings
-car = Car(
-    title="2023 Tesla Model 3 Long Range",
-    url="https://www.premiumauto.com/cars/tesla-model-3-2023",
-    price=45990,
-    currency="USD",
-    year=2023,
-    mileage=12000,
-    brand="Tesla",
-    model="Model 3",
-    version="Long Range AWD",
-    fuel="electric",
-    gearbox="auto",
-    category="saloon",
-    color="white",
-    door="fourfive",
-    power=346,
-    seats=5,
-    range=358,
-    battery=75,
+# Create Table2 records
+record2 = Table2(
+    id="t2-001",
+    table1Id="t1-001",
+    title="Related Item",
+    amount=99.99,
+    priority="high",
+    percentage=75.5,
+    notes="This item is related to the first entity",
+    isActive=True,
 )
 
 package = Package(
     {
-        "$schema": "https://raw.githubusercontent.com/datisthq/cardealerdp/v0.3.1/extension/profile.json",
+        "$schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/profile.json",
         "resources": [
             {
-                "name": "car",
-                "data": [car],
-                "schema": "https://raw.githubusercontent.com/datisthq/cardealerdp/v0.3.1/extension/schemas/car.json",
+                "name": "table1",
+                "data": [record1],
+                "schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table1.json",
             },
             {
-                "name": "dealer",
-                "data": [dealer],
-                "schema": "https://raw.githubusercontent.com/datisthq/cardealerdp/v0.3.1/extension/schemas/dealer.json",
+                "name": "table2",
+                "data": [record2],
+                "schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table2.json",
             },
         ],
     }
 )
 
-frictionless.Package(package).to_json("cardealer.json")
+frictionless.Package(package).to_json("extension.json")
 ```
 
 ### Validation
@@ -87,7 +74,7 @@ frictionless.Package(package).to_json("cardealer.json")
 ```python
 import frictionless
 
-report = frictionless.validate("cardealer.json")
+report = frictionless.validate("extension.json")
 print(report)
 ```
 
@@ -96,84 +83,71 @@ print(report)
 ```python
 import frictionless
 
-package = frictionless.Package("cardealer.json")
+package = frictionless.Package("extension.json")
 print(package)
 ```
 
 ## TypeScript
 
 :::note
-In addition to the TypeScript SDK, we recommend using [dpkit](https://dpkit.dev/) to manage your data packages. For example, using it you can publish your data pacakge directory to Zenodo instead of saving it locally, as well, as consumte it from a remote server.
+In addition to the TypeScript SDK, we recommend using [dpkit](https://dpkit.dev/) to manage your data packages. For example, using it you can publish your data package directory to Zenodo instead of saving it locally, as well as consume it from a remote server.
 :::
 
 ### Installation
 
 ```bash
-npm install cardealerdp dpkit
+npm install extensiondp dpkit
 ```
 
 ### Publication
 
 ```typescript
-import type { Car, Dealer, Package } from "cardealerdp";
+import type { Table1, Table2, Package } from "extensiondp";
 import { savePackageDescriptor } from "dpkit";
 
-const dealer: Dealer = {
-	title: "Premium Auto Sales",
-	country: "United States",
-	region: "California",
-	city: "Los Angeles",
-	address: "1234 Sunset Boulevard",
-	postcode: "90028",
-	phone: "+1-323-555-0100",
-	email: "sales@premiumauto.com",
-	url: "https://www.premiumauto.com",
-	lat: 34.0983,
-	lon: -118.3267,
+const record1: Table1 = {
+	id: "t1-001",
+	name: "First Entity",
+	status: "active",
+	value: 100.5,
+	itemCount: 5,
+	isVerified: true,
+	createdDate: "2024-01-15",
+	description: "This is the first example entity",
 };
 
-const car: Car = {
-	title: "2023 Tesla Model 3 Long Range",
-	url: "https://www.premiumauto.com/cars/tesla-model-3-2023",
-	price: 45990,
-	currency: "USD",
-	year: 2023,
-	mileage: 12000,
-	brand: "Tesla",
-	model: "Model 3",
-	version: "Long Range AWD",
-	fuel: "electric",
-	gearbox: "auto",
-	category: "saloon",
-	color: "white",
-	door: "fourfive",
-	power: 346,
-	seats: 5,
-	range: 358,
-	battery: 75,
+const record2: Table2 = {
+	id: "t2-001",
+	table1Id: "t1-001",
+	title: "Related Item",
+	amount: 99.99,
+	priority: "high",
+	percentage: 75.5,
+	notes: "This item is related to the first entity",
+	isActive: true,
 };
 
 const dataPackage: Package = {
 	$schema:
-		"https://raw.githubusercontent.com/datisthq/cardealerdp/v0.3.1/extension/profile.json",
+		"https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/profile.json",
 	resources: [
 		{
-			name: "car",
-			data: [car],
+			name: "table1",
+			data: [record1],
 			schema:
-				"https://raw.githubusercontent.com/datisthq/cardealerdp/v0.3.1/extension/schemas/car.json",
+				"https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table1.json",
 		},
 		{
-			name: "dealer",
-			data: [dealer],
+			name: "table2",
+			data: [record2],
 			schema:
-				"https://raw.githubusercontent.com/datisthq/cardealerdp/v0.3.1/extension/schemas/dealer.json",
+				"https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table2.json",
 		},
 	],
 };
 
 await savePackageDescriptor(dataPackage, {
-	path: "cardealer.json",
+	path: "extension.json",
 	overwrite: true,
 });
 ```
@@ -183,7 +157,7 @@ await savePackageDescriptor(dataPackage, {
 ```typescript
 import { validatePackage } from "dpkit";
 
-const { valid, errors } = await validatePackage("cardealer.json");
+const { valid, errors } = await validatePackage("extension.json");
 console.log(valid, errors);
 ```
 
@@ -192,7 +166,7 @@ console.log(valid, errors);
 ```typescript
 import { loadPackageDescriptor } from "dpkit";
 
-const dataPackage = await loadPackageDescriptor("cardealer.json");
+const dataPackage = await loadPackageDescriptor("extension.json");
 console.log(dataPackage);
 ```
 
@@ -212,11 +186,11 @@ curl -fsSL https://dpkit.dev/install.sh | sh
 ### Validation
 
 ```bash
-./dp package validate cardealer.json
+./dp package validate extension.json
 ```
 
 ### Consumption
 
 ```bash
-./dp table expore -p cardealer.json
+./dp table explore -p extension.json
 ```

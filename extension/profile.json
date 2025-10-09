@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
-  "title": "Car Dealer Data Package Profile",
+  "title": "Extension Data Package Profile",
   "allOf": [
     { "$ref": "https://datapackage.org/profiles/2.0/datapackage.json" },
     { "$ref": "#/definitions/Package" }
@@ -25,83 +25,50 @@
     "Resource": {
       "oneOf": [
         {
-          "$ref": "#/definitions/CarResource"
+          "$ref": "#/definitions/Table1Resource"
         },
         {
-          "$ref": "#/definitions/DealerResource"
-        },
-        {
-          "$ref": "#/definitions/ShowroomResource"
+          "$ref": "#/definitions/Table2Resource"
         }
       ]
     },
-    "CarResource": {
+    "Table1Resource": {
       "type": "object",
-      "required": ["name", "data", "schema"],
-      "not": {
-        "required": ["path"]
-      },
+      "required": ["name", "schema"],
       "properties": {
         "name": {
-          "const": "car"
+          "const": "table1"
         },
         "data": {
           "type": "array",
-          "description": "Data items have to conform to the Car table schema",
+          "description": "Data items have to conform to the Table1 schema",
           "minItems": 1,
           "items": {
             "type": "object"
           }
         },
         "schema": {
-          "const": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/car.json"
+          "const": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table1.json"
         }
       }
     },
-    "DealerResource": {
+    "Table2Resource": {
       "type": "object",
-      "required": ["name", "data", "schema"],
-      "not": {
-        "required": ["path"]
-      },
+      "required": ["name", "schema"],
       "properties": {
         "name": {
-          "const": "dealer"
+          "const": "table2"
         },
         "data": {
           "type": "array",
-          "description": "Data items have to conform to the Dealer table schema",
-          "minItems": 1,
-          "maxItems": 1,
-          "items": {
-            "type": "object"
-          }
-        },
-        "schema": {
-          "const": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/dealer.json"
-        }
-      }
-    },
-    "ShowroomResource": {
-      "type": "object",
-      "required": ["name", "data", "schema"],
-      "not": {
-        "required": ["path"]
-      },
-      "properties": {
-        "name": {
-          "const": "showroom"
-        },
-        "data": {
-          "type": "array",
-          "description": "Data items have to conform to the Showroom table schema",
+          "description": "Data items have to conform to the Table2 schema",
           "minItems": 1,
           "items": {
             "type": "object"
           }
         },
         "schema": {
-          "const": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/showroom.json"
+          "const": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table2.json"
         }
       }
     }

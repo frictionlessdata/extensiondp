@@ -1,3 +1,2 @@
-from .car import *
-from .dealer import *
-from .showroom import *
+from .table1 import *
+from .table2 import *

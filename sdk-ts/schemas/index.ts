@@ -1,3 +1,2 @@
-export * from "./car.ts"
-export * from "./dealer.ts"
-export * from "./showroom.ts"
+export * from "./table1.ts"
+export * from "./table2.ts"

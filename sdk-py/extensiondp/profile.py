@@ -4,41 +4,32 @@ from __future__ import annotations
 
 from typing import Any, Literal, Mapping, Sequence, TypedDict, Union
 
+from typing_extensions import NotRequired
 
-class CarResource(TypedDict):
-    name: Literal['car']
-    data: Sequence[Mapping[str, Any]]
+
+class Table1Resource(TypedDict):
+    name: Literal['table1']
+    data: NotRequired[Sequence[Mapping[str, Any]]]
     """
-    Data items have to conform to the Car table schema
+    Data items have to conform to the Table1 schema
     """
     schema: Literal[
-        'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/car.json'
+        'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table1.json'
     ]
 
 
-class DealerResource(TypedDict):
-    name: Literal['dealer']
-    data: Sequence[Mapping[str, Any]]
+class Table2Resource(TypedDict):
+    name: Literal['table2']
+    data: NotRequired[Sequence[Mapping[str, Any]]]
     """
-    Data items have to conform to the Dealer table schema
+    Data items have to conform to the Table2 schema
     """
     schema: Literal[
-        'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/dealer.json'
+        'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table2.json'
     ]
 
 
-class ShowroomResource(TypedDict):
-    name: Literal['showroom']
-    data: Sequence[Mapping[str, Any]]
-    """
-    Data items have to conform to the Showroom table schema
-    """
-    schema: Literal[
-        'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/showroom.json'
-    ]
-
-
-Resource = Union[CarResource, DealerResource, ShowroomResource]
+Resource = Union[Table1Resource, Table2Resource]
 
 
 Package = TypedDict(
@@ -52,5 +43,5 @@ Package = TypedDict(
 )
 
 
-class CarDealerDataPackageProfile(Package):
+class ExtensionDataPackageProfile(Package):
     pass
