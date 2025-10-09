@@ -29,7 +29,7 @@ title: Table1
         </code>
       </td>
       <td>
-        <p>Unique identifier for the record</p>
+        <p>Unique identifier of the record</p>
         <strong>Constraints</strong>
         <ul>
           <li>

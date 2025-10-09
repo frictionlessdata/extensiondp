@@ -8,7 +8,7 @@
     {
       "name": "id",
       "type": "string",
-      "description": "Unique identifier for the record",
+      "description": "Unique identifier of the record",
       "examples": ["t1-001", "t1-002", "t1-003"],
       "constraints": {
         "required": true,
