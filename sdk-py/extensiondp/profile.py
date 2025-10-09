@@ -2,17 +2,11 @@
 
 from __future__ import annotations
 
-from typing import Any, Literal, Mapping, Sequence, TypedDict, Union
-
-from typing_extensions import NotRequired
+from typing import Literal, Sequence, TypedDict, Union
 
 
 class Table1Resource(TypedDict):
     name: Literal['table1']
-    data: NotRequired[Sequence[Mapping[str, Any]]]
-    """
-    Data items have to conform to the Table1 schema
-    """
     schema: Literal[
         'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.1/extension/schemas/table1.json'
     ]
@@ -20,10 +14,6 @@ class Table1Resource(TypedDict):
 
 class Table2Resource(TypedDict):
     name: Literal['table2']
-    data: NotRequired[Sequence[Mapping[str, Any]]]
-    """
-    Data items have to conform to the Table2 schema
-    """
     schema: Literal[
         'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.1/extension/schemas/table2.json'
     ]

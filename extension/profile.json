@@ -35,17 +35,10 @@
     "Table1Resource": {
       "type": "object",
       "required": ["name", "schema"],
+      "description": "Data records have to conform to the Table1 schema",
       "properties": {
         "name": {
           "const": "table1"
-        },
-        "data": {
-          "type": "array",
-          "description": "Data items have to conform to the Table1 schema",
-          "minItems": 1,
-          "items": {
-            "type": "object"
-          }
         },
         "schema": {
           "const": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.1/extension/schemas/table1.json"
@@ -55,17 +48,10 @@
     "Table2Resource": {
       "type": "object",
       "required": ["name", "schema"],
+      "description": "Data items have to conform to the Table2 schema",
       "properties": {
         "name": {
           "const": "table2"
-        },
-        "data": {
-          "type": "array",
-          "description": "Data items have to conform to the Table2 schema",
-          "minItems": 1,
-          "items": {
-            "type": "object"
-          }
         },
         "schema": {
           "const": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.1/extension/schemas/table2.json"

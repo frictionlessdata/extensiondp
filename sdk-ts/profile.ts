@@ -10,23 +10,17 @@ export interface Package {
    */
   resources: [Resource, ...Resource[]]
 }
+/**
+ * Data records have to conform to the Table1 schema
+ */
 export interface Table1Resource {
   name: "table1"
-  /**
-   * Data items have to conform to the Table1 schema
-   *
-   * @minItems 1
-   */
-  data?: [{}, ...{}[]]
   schema: "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.1/extension/schemas/table1.json"
 }
+/**
+ * Data items have to conform to the Table2 schema
+ */
 export interface Table2Resource {
   name: "table2"
-  /**
-   * Data items have to conform to the Table2 schema
-   *
-   * @minItems 1
-   */
-  data?: [{}, ...{}[]]
   schema: "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.1/extension/schemas/table2.json"
 }
