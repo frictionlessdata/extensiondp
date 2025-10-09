@@ -5,7 +5,7 @@ sidebar:
 ---
 
 > [!TIP]
-> This is a template to create your own Data Package Extension. To start using it, click "Use this template" on [GitHub](https://github.com/datisthq/extensiondp) in the top right corner. After cloning a newly created repo, run `git tag v0.1.0 && git push --tags` to create an initial semantic version. Read [Contribution Guide](contributing) for following steps. **This documentation is just a placeholder to get started with!**
+> This is a template to create your own Data Package Extension. To start using it, click "Use this template" on [GitHub](https://github.com/datisthq/extensiondp) in the top right corner. After cloning a newly created repo, run `git tag v0.1.0 && git push --tags` to create an initial semantic version. Read [Contribution Guide](../contributing) for following steps. **This documentation is just a placeholder to get started with!**
 
 Extension DP (Data Package Extension Template) is a data exchange format that helps `PLACEHOLDER` share their `PLACEHOLDER`. It is developed on top of the Data Package standard.
 
