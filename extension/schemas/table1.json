@@ -79,7 +79,10 @@
       "name": "description",
       "type": "string",
       "description": "Optional description of the entity",
-      "examples": ["This is a sample description", "Additional notes about the entity"]
+      "examples": [
+        "This is a sample description",
+        "Additional notes about the entity"
+      ]
     }
   ]
 }
