@@ -11,7 +11,7 @@
       "required": ["$schema", "resources"],
       "properties": {
         "$schema": {
-          "const": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.2/extension/profile.json"
+          "const": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.3/extension/profile.json"
         },
         "resources": {
           "type": "array",
@@ -41,7 +41,7 @@
           "const": "table1"
         },
         "schema": {
-          "const": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.2/extension/schemas/table1.json"
+          "const": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.3/extension/schemas/table1.json"
         }
       }
     },
@@ -54,7 +54,7 @@
           "const": "table2"
         },
         "schema": {
-          "const": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.2/extension/schemas/table2.json"
+          "const": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.3/extension/schemas/table2.json"
         }
       }
     }

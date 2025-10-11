@@ -8,14 +8,14 @@ from typing import Literal, Sequence, TypedDict, Union
 class Table1Resource(TypedDict):
     name: Literal['table1']
     schema: Literal[
-        'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.2/extension/schemas/table1.json'
+        'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.3/extension/schemas/table1.json'
     ]
 
 
 class Table2Resource(TypedDict):
     name: Literal['table2']
     schema: Literal[
-        'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.2/extension/schemas/table2.json'
+        'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.3/extension/schemas/table2.json'
     ]
 
 
@@ -26,7 +26,7 @@ Package = TypedDict(
     'Package',
     {
         '$schema': Literal[
-            'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.2/extension/profile.json'
+            'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.3/extension/profile.json'
         ],
         'resources': Sequence[Resource],
     },
