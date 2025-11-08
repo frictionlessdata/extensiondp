@@ -11,7 +11,7 @@ Extension DP (Data Package Extension Template) is a data exchange format that he
 
 ## Why Extension DP?
 
-The `PLACEHOLDER` lacks a standardized format for exchanging car listing data between marketplaces, and aggregation platforms. This creates several challenges:
+The `PLACEHOLDER` lacks a standardized format for exchanging  data among publishers, and aggregation platforms. This creates several challenges:
 
 - **Data inconsistency**: Each platform uses its own proprietary format, making integration difficult
 - **Manual data entry**: Often needed to manually enter the same data across multiple platforms
