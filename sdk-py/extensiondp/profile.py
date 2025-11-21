@@ -7,16 +7,12 @@ from typing import Literal, Sequence, TypedDict, Union
 
 class Table1Resource(TypedDict):
     name: Literal['table1']
-    schema: Literal[
-        'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.6/extension/schemas/table1.json'
-    ]
+    schema: Literal['https://datisthq.github.io/extension/v0.1.6/schemas/table1.json']
 
 
 class Table2Resource(TypedDict):
     name: Literal['table2']
-    schema: Literal[
-        'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.6/extension/schemas/table2.json'
-    ]
+    schema: Literal['https://datisthq.github.io/extension/v0.1.6/schemas/table2.json']
 
 
 Resource = Union[Table1Resource, Table2Resource]
@@ -25,9 +21,7 @@ Resource = Union[Table1Resource, Table2Resource]
 Package = TypedDict(
     'Package',
     {
-        '$schema': Literal[
-            'https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.6/extension/profile.json'
-        ],
+        '$schema': Literal['https://datisthq.github.io/extension/v0.1.6/profile.json'],
         'resources': Sequence[Resource],
     },
 )

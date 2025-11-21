@@ -12,11 +12,11 @@ A basic example with two tables using inline data. Table2 records can optionally
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/profile.json",
+  "$schema": "https://datisthq.github.io/extensiondp/extension/v0.1.5/profile.json",
   "resources": [
     {
       "name": "table1",
-      "schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table1.json",
+      "schema": "https://datisthq.github.io/extensiondp/extension/v0.1.5/schemas/table1.json",
       "data": [
         {
           "id": "t1-001",
@@ -41,7 +41,7 @@ A basic example with two tables using inline data. Table2 records can optionally
     },
     {
       "name": "table2",
-      "schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table2.json",
+      "schema": "https://datisthq.github.io/extensiondp/extension/v0.1.5/schemas/table2.json",
       "data": [
         {
           "id": "t2-001",
@@ -85,16 +85,16 @@ An example demonstrating the use of `path` instead of inline `data` to reference
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/profile.json",
+  "$schema": "https://datisthq.github.io/extensiondp/extension/v0.1.5/profile.json",
   "resources": [
     {
       "name": "table1",
-      "schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table1.json",
+      "schema": "https://datisthq.github.io/extensiondp/extension/v0.1.5/schemas/table1.json",
       "path": "data/table1.csv"
     },
     {
       "name": "table2",
-      "schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table2.json",
+      "schema": "https://datisthq.github.io/extensiondp/extension/v0.1.5/schemas/table2.json",
       "path": "data/table2.csv"
     }
   ]
@@ -123,11 +123,11 @@ A minimal valid Extension DP file with only required fields.
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/profile.json",
+  "$schema": "https://datisthq.github.io/extensiondp/extension/v0.1.5/profile.json",
   "resources": [
     {
       "name": "table1",
-      "schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table1.json",
+      "schema": "https://datisthq.github.io/extensiondp/extension/v0.1.5/schemas/table1.json",
       "data": [
         {
           "id": "t1-001",
@@ -141,7 +141,7 @@ A minimal valid Extension DP file with only required fields.
     },
     {
       "name": "table2",
-      "schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table2.json",
+      "schema": "https://datisthq.github.io/extensiondp/extension/v0.1.5/schemas/table2.json",
       "data": [
         {
           "id": "t2-001",
@@ -164,11 +164,11 @@ An example showing various constraint validations:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/profile.json",
+  "$schema": "https://datisthq.github.io/extensiondp/extension/v0.1.5/profile.json",
   "resources": [
     {
       "name": "table1",
-      "schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table1.json",
+      "schema": "https://datisthq.github.io/extensiondp/extension/v0.1.5/schemas/table1.json",
       "data": [
         {
           "id": "t1-999",
@@ -184,7 +184,7 @@ An example showing various constraint validations:
     },
     {
       "name": "table2",
-      "schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table2.json",
+      "schema": "https://datisthq.github.io/extensiondp/extension/v0.1.5/schemas/table2.json",
       "data": [
         {
           "id": "t2-999",

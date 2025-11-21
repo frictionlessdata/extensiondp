@@ -49,17 +49,17 @@ record2 = Table2(
 
 package = Package(
     {
-        "$schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/profile.json",
+        "$schema": "https://datisthq.github.io/extensiondp/extension/v0.1.5/profile.json",
         "resources": [
             {
                 "name": "table1",
                 "data": [record1],
-                "schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table1.json",
+                "schema": "https://datisthq.github.io/extensiondp/extension/v0.1.5/schemas/table1.json",
             },
             {
                 "name": "table2",
                 "data": [record2],
-                "schema": "https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table2.json",
+                "schema": "https://datisthq.github.io/extensiondp/extension/v0.1.5/schemas/table2.json",
             },
         ],
     }
@@ -127,19 +127,19 @@ const record2: Table2 = {
 
 const dataPackage: Package = {
 	$schema:
-		"https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/profile.json",
+		"https://datisthq.github.io/extensiondp/extension/v0.1.5/profile.json",
 	resources: [
 		{
 			name: "table1",
 			data: [record1],
 			schema:
-				"https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table1.json",
+				"https://datisthq.github.io/extensiondp/extension/v0.1.5/schemas/table1.json",
 		},
 		{
 			name: "table2",
 			data: [record2],
 			schema:
-				"https://raw.githubusercontent.com/datisthq/extensiondp/v0.1.0/extension/schemas/table2.json",
+				"https://datisthq.github.io/extensiondp/extension/v0.1.5/schemas/table2.json",
 		},
 	],
 };

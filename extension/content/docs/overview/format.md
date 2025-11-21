@@ -28,16 +28,16 @@ A Extension DP is a [Data Package](https://datapackage.org/) that follows the Da
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/datisthq/extensiondp/<version>/extension/profile.json",
+  "$schema": "https://datisthq.github.io/extensiondp/extension/<version>/profile.json",
   "resources": [
     {
       "name": "table1",
-      "schema": "https://raw.githubusercontent.com/datisthq/extensiondp/<version>/extension/schemas/table1.json",
+      "schema": "https://datisthq.github.io/extensiondp/extension/<version>/schemas/table1.json",
       "data": [{...}, {...}, {...}]
     },
     {
       "name": "table2",
-      "schema": "https://raw.githubusercontent.com/datisthq/extensiondp/<version>/extension/schemas/table2.json",
+      "schema": "https://datisthq.github.io/extensiondp/extension/<version>/schemas/table2.json",
       "data": [{...}]
     }
   ]
