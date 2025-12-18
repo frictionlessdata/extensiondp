@@ -6,8 +6,8 @@
   "slug": "extensiondp",
   "title": "Extension DP",
   "description": "Extension DP (Data Package Extension Template) is a Git repository template for rapid Data Package extension development",
-  "repository": "https://github.com/datisthq/extensiondp",
-  "homepage": "https://datisthq.github.io/extensiondp",
+  "repository": "https://github.com/frictionlessdata/extensiondp",
+  "homepage": "https://frictionlessdata.github.io/extensiondp",
   "author": "Evgeny Karev",
   "scripts": {
     "build": "astro build",

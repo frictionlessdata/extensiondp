@@ -5,12 +5,8 @@ description = "Extension DP (Data Package Extension Template) is a Git repositor
 readme = "README.md"
 requires-python = ">=3.12"
 license = "MIT"
-classifiers = [
-  "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.12",
-  "Topic :: Software Development :: Libraries :: Python Modules"
-]
-dependencies = ["typing-extensions>=4.15"]
+classifiers = [ "Programming Language :: Python :: 3", "Programming Language :: Python :: 3.12", "Topic :: Software Development :: Libraries :: Python Modules" ]
+dependencies = [ "typing-extensions>=4.15" ]
 slug = "extensiondp"
 title = "Extension DP"
 
@@ -18,9 +14,9 @@ title = "Extension DP"
 name = "Evgeny Karev"
 
 [project.urls]
-homepage = "https://datisthq.github.io/extensiondp"
-repository = "https://github.com/datisthq/extensiondp"
+repository = "https://github.com/frictionlessdata/extensiondp"
+homepage = "https://frictionlessdata.github.io/extensiondp"
 
 [build-system]
-requires = ["hatchling"]
+requires = [ "hatchling" ]
 build-backend = "hatchling.build"
